@@ -1,0 +1,746 @@
+
+/*Header design*/
+* {
+    box-sizing: border-box;
+  }
+   body {
+     height: 100%;
+      padding: 0px;
+      margin: 0px;
+      background: whitesmoke;
+      font-family: "Lora", serif;
+  
+  }
+  
+
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'candal', serif;
+    color: rgb(42, 47, 67);
+    margin: 5px;
+    
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .btn {
+    padding: .5rem 1rem;
+    background: rgb(42, 47, 67);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 1.08em;
+    font-family: 'Lora', serif;
+
+  }
+
+  .msg {
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+  }
+
+  .success {
+    color: green;
+    border: 1px solid green;
+    background: lightgreen;
+  }
+
+  .error {
+    color: darkred;
+    border: 1px solid darkred;
+    background: rgb(216, 94, 94);
+  }
+
+  /*NAVBAR*/
+  .text-input {
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    color: gray;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: "Lora", serif;
+
+  }
+  
+
+/*Header*/
+  header {
+      background: rgb(27, 34, 59);
+      height: 70px;
+  }
+  
+  header * {
+      color: white;
+  }
+  
+  header .logo {
+      float: left; 
+      height: inherit;
+      margin-left:  2em;
+  }
+  
+  header .logo-text {
+      margin: 10px;
+      font-family: "Candal", serif;
+
+  }
+  
+  .logo-text {
+    font-family: "Candal", serif;
+    color: white; /* Ensure that "Blog" is set to white */
+  }
+
+  .logo-text span {
+      color: rgb(133, 172, 205);
+  }
+
+   /*Content*/
+
+   .content {
+    width: 93%;
+    margin: 30px auto 30px;
+   }
+
+   .content .main-content {
+    width: 70%;
+    float: left;
+   }
+
+   .main-content.single {
+    background: rgb(237, 236, 236);
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+   }
+
+   .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+   }
+
+
+   .content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: rgb(243, 240, 240);
+   }
+
+
+   .content .popular .post {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    clear: both; /* Ensure posts do not overlap */
+}
+
+.content .popular .post img {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-right: 15px; /* Add some margin for spacing */
+    border-radius: 5px; /* Optionally make the images rounded */
+}
+
+.content .popular .post a.title {
+    font-size: 1em;
+    color: rgb(42, 47, 67);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding-top: 15px; /* Adjust vertical padding */
+}
+
+.content .popular .post a.title:hover {
+    color: rgb(86, 137, 178); /* Hover color effect */
+    text-decoration: underline;
+}    
+
+   
+
+   .content .main-content .post .post-image{
+    width: 30%;
+    height: 100%;
+    float: left;
+   }
+
+   .content .main-content .post .post-preview {
+    width: 65%;
+    padding: 10px;
+    float: right;
+    text-decoration: none; /* Remove the underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+   }
+
+   .content .main-content .recent-post-title{
+    margin: 20px;
+   }
+
+   .content .sidebar {
+    width: 30%;
+    float: left;
+    height: 300px;
+   }
+
+   .sidebar.single {
+    padding: 0px 10px;
+}
+
+   .content .main-content .post .post-preview h2 a:hover {
+    color: rgb(86, 137, 178); /* Change color when hovering */
+  }
+
+
+
+  /* Like Section */
+.heart__icon {
+  color: rgb(27, 34, 59);
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.heart__icon.liked {
+  color: #ff6b6b;
+}
+
+/* Comment Form */
+.form__info input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.form__info input::placeholder {
+  color: #ddd;
+}
+
+button.submit__btn {
+  background-color: rgb(42, 47, 67);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Comments Section */
+#comment-display {
+  margin-top: 20px;
+}
+
+.comment__card {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.comment__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__info p {
+  color: #333;
+}
+
+   /*Side Bar*/
+   
+   .content .sidebar .section {
+    background:rgb(244, 241, 241);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+   }
+
+   .content .sidebar .section .section-title {
+    margin: 10px 0px 10px 0px;
+   }
+
+   .content .sidebar .section.search {
+    margin-top: 80px;
+   }
+   .content .sidebar .section.topics ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid black;
+   }
+
+   .content .sidebar .section.topics ul li a {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid black;
+    transition: all 0.3s;
+   }
+
+
+   .content .sidebar .section.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.1s;
+
+   } 
+
+
+  header ul {
+      float: right;
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+  }
+  
+  header ul li {
+      float: left;
+      position: relative;
+  }
+  
+  header ul li ul{
+      position: absolute;
+      top: 70px;
+      right: 0px;
+      width: 180px;
+      display: none;
+      z-index: 1000;
+
+  }
+
+  header ul li:hover ul {
+    display:block;
+  }
+   
+  header ul li ul li {
+      width: 180px;
+  }
+  
+  header ul li ul li a {
+      padding: 10px;
+      background: white;
+      color: #444444;
+  }
+
+  header ul li ul li a.logout {
+      color: red
+  }
+  
+  header ul li ul li a:hover {
+      background:  rgb(137, 144, 170);
+  }
+  
+  header ul li a {
+    display: block;
+    padding: 23px 25px; /* Adjust padding to fit the background correctly */
+    font-size: 1.1em;
+    text-decoration: none;
+  }
+  
+  header ul li a:hover {
+      background:  rgb(42, 47, 67);
+      transition: 0.5s;
+  }
+  
+  header .menu-toggle {
+      display: none;
+  }
+
+  .page-wrapper{
+    min-height: 100; /* Ensure the content fills the view height */
+    padding-bottom: 50px; /* Add some space between the content and the footer */
+    position: relative; /* Ensure relative positioning */
+  }
+ 
+   /*Post Slider Content*/
+.post-slider {
+  position: relative;
+}
+
+.post-slider .slider-title {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.post-slider .post-wrapper {
+  width: 84%;
+  margin: 0px auto;
+  display: flex; /* Align posts horizontally */
+  justify-content: space-between; /* Space between posts */
+  flex-wrap: wrap; /* Handle multiple posts in a responsive manner */
+  padding: 10px 0px 10px 0px;
+}
+
+.post-slider .post-wrapper .post {
+  height: 330px;
+  width: 300px;
+  background-color: rgb(244, 241, 241);
+  border-radius: 20px;
+  margin-bottom: 20px; /* Add spacing between posts vertically */
+  overflow: hidden; /* Prevent overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.post-slider .post-wrapper .post .post-info  {
+  height: 130px;
+  padding: 0px 5px;
+}
+
+
+.post-slider .post-wrapper .post-image {
+  width: 100%;
+  height: 200px; /* Fix height to maintain aspect ratio */
+  object-fit: cover; /* Prevent image distortion */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
+}
+
+.post-info {
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+.post-info h4 {
+  font-size: 16px; /* Smaller title size */
+  font-weight: bold;
+  margin: 5px 0; /* Reduce space around title */
+  color: rgb(61, 60, 60); /* Default color for the title */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition effect */
+
+}
+
+.post-info h4 a:hover {
+  color:  rgb(86, 137, 178); /* Change color on hover*/
+}
+
+
+.post-info i {
+  font-size: 12px; /* Make the name and date smaller */
+  color: rgb(38, 37, 37); /* Lighter color for subtle visibility */
+  margin-top: 20px;
+  
+}
+
+
+
+/*Auth Pages*/
+
+.auth-content {
+  width: 500px;
+  height: 50;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 5px;
+}
+
+.auth-content .form-title {
+  text-align: center;
+}
+
+.auth-content form div {
+  margin-bottom: 25px;
+}
+
+.auth-content form p {
+  text-align: center;
+}
+
+.auth-content form p a {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+  background: rgb(42, 47, 67);
+  color: white;
+  padding: 40px 40px; /* Padding for top and bottom */
+  clear: both;
+  z-index: 1;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between; /* Space sections evenly */
+  align-items: flex-start; /* Align items to the top */
+  padding: 0 40px; /* Padding inside the footer */
+}
+
+.footer .footer-section {
+  flex: 1;
+  padding: 0 20px; /* Space between sections */
+}
+
+.footer .footer-section.about {
+  flex: 1.2; /* Give more space to About section */
+  text-align: left; /* Align content to the left */
+}
+
+.footer h1.logo-text {
+  font-family: "Candal", serif;
+  font-size: 36px; /* Larger font size for logo */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white; /* Ensure "FoodBlog" color is white */
+}
+
+.footer .logo-text span {
+  color: rgb(133, 172, 205); /* Adjust color for the first part of the logo text */
+}
+
+.footer .footer-section.about p {
+  color: rgba(255, 255, 255, 0.7); /* Lighter text for description */
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.footer .footer-section.about .contact {
+  margin-top: 20px;
+}
+
+.footer .footer-section.about .contact span {
+  display: block; /* Display each contact item in its own line */
+  color: rgba(255, 255, 255, 0.9); /* Brighten contact details */
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-section.about .socials {
+  margin-top: 20px;
+}
+
+.footer .footer-section.about .socials a {
+  color: rgba(255, 255, 255, 0.9); /* Lighter icons */
+  margin-right: 10px;
+  font-size: 18px; /* Adjust icon size */
+}
+
+.footer .footer-section.about .socials a:hover {
+  color: rgb(133, 172, 205); /* Highlight effect on hover */
+}
+
+.footer .footer-section h2 {
+  color: white; /* Make headings the same color */
+  font-size: 30px; /* Match the font size with "FoodBlog" */
+  font-family: "Candal", serif; /* Same font as "FoodBlog" */
+  font-weight: bold;
+  margin-bottom: 20px; /* Add spacing below heading */
+}
+
+.footer .footer-section p,
+.footer .footer-section ul li a {
+  color: whitesmoke; /* Text color to match "FoodBlog" */
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-section ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.footer .footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer-section.contact-form input,
+.footer .footer-section.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #ddd;
+  border: none;
+  border-radius: 5px;
+  resize: none; /* Disable resizing */
+}
+
+.footer .footer-section.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer .footer-section.contact-form button:hover {
+  background: rgb(133, 172, 205);
+}
+
+.footer-bottom {
+  background: black;
+  color: gray;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Ensure "Quick Links" and "Contact Us" sections align and color match */
+.footer .footer-section.links,
+.footer .footer-section.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Content starts at the top */
+  align-items: flex-start; /* Align to the left */
+}
+
+.footer .footer-section.links ul,
+.footer .footer-section.contact-form {
+  width: 100%;
+}
+
+
+/*Admin*/
+header {
+  background-color: rgb(27, 34, 59);
+}
+
+.admin-wrapper {
+  display: flex;
+  height: calc(100vh - 66px);
+}
+
+.admin-wrapper .left-sidebar {
+  flex: 2;
+  height: 100%;
+  background:  rgb(43, 54, 93); 
+  color: aliceblue;
+  padding: 10px;
+}
+
+.admin-wrapper .left-sidebar ul li a {
+  padding: 18px;
+  display: block;
+  border-bottom: 1px solid rgb(94, 100, 118);
+
+}
+
+.admin-wrapper .left-sidebar ul li a:hover {
+  background: rgb(27, 34, 59);
+
+}
+
+.admin-wrapper .admin-content {
+  flex: 8;
+  height: 100%;
+  padding: 40px 100px 100px;
+  overflow-y: scroll;
+}
+.admin-content .page-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+}
+
+.Edit {
+  color: green;
+}
+
+.Delete {
+  color: red;
+}
+
+.Publish {
+  color: rgb(27, 34, 59);
+}
+
+.Edit:hover, .Delete:hover, .Publish:hover {
+  text-decoration: underline;
+}
+
+/* Style for Manage Post Form */
+.content form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content form div {
+  margin-bottom: 20px;
+}
+
+.content form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.content form input[type="text"],
+.content form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.content form .btn-save {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1b223b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.content form .btn-save:hover {
+  background-color: #0d1124;
+}
+
+
+

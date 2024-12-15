@@ -1,0 +1,124 @@
+header {
+    background-color: rgb(27, 34, 59);
+}
+
+.admin-wrapper {
+    display: flex;
+    height: calc(100vh - 66px);
+}
+
+.admin-wrapper .left-sidebar {
+    flex: 2;
+    height: 100%;
+    background:  rgb(43, 54, 93); 
+    color: aliceblue;
+    padding: 10px;
+}
+
+.admin-wrapper .left-sidebar ul li a {
+    padding: 18px;
+    display: block;
+    border-bottom: 1px solid rgb(94, 100, 118);
+
+}
+
+.admin-wrapper .left-sidebar ul li a:hover {
+    background: rgb(27, 34, 59);
+
+}
+
+.admin-wrapper .admin-content {
+    flex: 8;
+    height: 100%;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
+.admin-content .page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid gray;
+}
+
+.Edit {
+    color: green;
+}
+
+.Delete {
+    color: red;
+}
+
+.Publish {
+    color: rgb(27, 34, 59);
+}
+
+.Edit:hover, .Delete:hover, .Publish:hover {
+    text-decoration: underline;
+}
+
+/* Style for Manage Post Form */
+.content form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content form div {
+    margin-bottom: 20px;
+}
+
+.content form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.content form input[type="text"],
+.content form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.content form .btn-save {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1b223b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.content form .btn-save:hover {
+    background-color: #0d1124;
+}
+
+
+
+
+
+
